@@ -18,6 +18,26 @@
   font-size: large;
 }
 
+.app {
+  margin: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.item {
+  margin: 20px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

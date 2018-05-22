@@ -1423,6 +1423,10 @@ bs-loader@^2.0.3:
     loader-utils "^1.1.0"
     read-bsconfig "^1.0.1"
 
+bs-platform@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-3.1.0.tgz#2e2065c32a9b8b41843bf7ae54bd6a5929521173"
+
 bsb-js@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/bsb-js/-/bsb-js-1.1.0.tgz#12d129a61abb98cae84aaf283f8c2ce633f2f881"

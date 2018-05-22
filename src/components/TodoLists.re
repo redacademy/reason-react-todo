@@ -1,32 +1,42 @@
 type item = {
-    title: string,
-    completed: bool
-}
+  id: int,
+  title: string,
+  completed: bool,
+};
 
-type state = {
-    items: list(item)
-}
+type state = {items: list(item)};
 
 let component = ReasonReact.reducerComponent("TodoLists");
 
-let ste = ReasonReact.stringToElement;
+let str = ReasonReact.string;
 
-let make = (children) => {
-    ...component,
-    initialState: () => {
-        items: [
-            {title: "milk", completed: false}
-        ]
-    },
-    reducer: ((), _) => ReasonReact.NoUpdate,
-    render: ({state: {items}}) => {
-        let numItems = List.length(items);
-        let word = (numItems === 1) ? " item" : "items";
-        <div className="app">
-          <div className="footer">
-            (ste(string_of_int(numItems) ++ word))
-          </div>
-        </div>
-      }
-
-}
+let make = _children => {
+  ...component,
+  initialState: () => {items: [{id: 0, title: "milk", completed: false}]},
+  reducer: ((), _) => ReasonReact.NoUpdate,
+  render: ({state: {items}}) => {
+    let numItems = List.length(items);
+    let word = numItems === 1 ? " item" : "items";
+    /* Js.log("items") */
+    <div className="app">
+      <div className="item">
+        (
+          ReasonReact.array(
+            Array.of_list(
+              List.map(
+                item =>
+                  <TodoItem
+                    key=(string_of_int(item.id))
+                    title=item.title
+                    completed=item.completed
+                  />,
+                items,
+              ),
+            ),
+          )
+        )
+      </div>
+      <div className="footer"> (str(string_of_int(numItems) ++ word)) </div>
+    </div>;
+  },
+};

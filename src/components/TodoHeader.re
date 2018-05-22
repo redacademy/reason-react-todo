@@ -1,14 +1,9 @@
 let component = ReasonReact.statelessComponent("TodoHeader");
 
-let make = (children) => {
-    ...component,
-    render: (self) => 
+let make = _children => {
+  ...component,
+  render: _self =>
     <div className="app">
-      <div className="title">
-        (ReasonReact.stringToElement("Todo List"))
-      </div>
-      <div className="items">
-        (ReasonReact.stringToElement("Reason React"))
-      </div>
-    </div>
-}
+      <div className="title"> (ReasonReact.string("Todo List")) </div>
+    </div>,
+};
