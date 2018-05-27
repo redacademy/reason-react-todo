@@ -5,7 +5,9 @@ type state = {
 
 type action =
   | InputText(string)
+  | Toggle(int)
   | DeleteAll
+  | RemoveItem(int)
   | Submit;
 
 let component = ReasonReact.reducerComponent("TodoLists");
@@ -34,12 +36,14 @@ let make = _children => {
       | InputText(newText) => (
           state => ReasonReact.Update({...state, inputText: newText})
         )
+      | Toggle(id) => state => ReasonReact.Update({...state, items: List.map((item: TodoModel.item) => item.id == id ? {...item, TodoModel.completed: ! TodoModel.(item.completed)} :item , state.items)})
+      | RemoveItem(id) => state => ReasonReact.Update({...state, items: List.filter((item: TodoModel.item) => item.id !== id, state.items)})
       | Submit => (state => handleSubmit(state))
       | DeleteAll => (state => ReasonReact.Update({...state, items: []}))
       },
     render: self => {
       let {items, inputText} = self.state;
-      Js.log(inputText);
+      /* Js.log(inputText); */
       let numItems = List.length(items);
       let word = numItems === 1 ? " item" : "items";
       <div className="app">
@@ -66,7 +70,7 @@ let make = _children => {
               Array.of_list(
                 List.map(
                   (item: TodoModel.item) =>
-                    <TodoItem key=(string_of_int(item.id)) item />,
+                    <TodoItem key=(string_of_int(item.id)) item onRemove={(id) =>self.send(RemoveItem(id))} onToggle={(id) =>self.send(Toggle(id))}/>,
                   items,
                 ),
               ),
