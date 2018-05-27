@@ -12,7 +12,7 @@ ReasonReact Todo App with React + OCaml + ReasonML + BuckleScript
 ## Running the Project
 
 1.  `git clone` this repo
-2.  Run `yarn install`
+2.  Run `yarn install` in the project directory
 3.  Run `yarn start` in the project directory
 
 ## Built with
@@ -32,4 +32,4 @@ Special thanks to [Chenglou](https://github.com/chenglou) for convincing me and 
 
 ## Links
 
-Intrested in React, ReasonReact, ReasonML and moere? Find us at [RED Acedemy](https://redacademy.com/)
+Interested in React, ReasonReact, ReasonML and more? Find us at [RED Academy](https://redacademy.com/)
