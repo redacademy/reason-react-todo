@@ -2,6 +2,8 @@
 
 ReasonReact Todo App with React + OCaml + ReasonML + BuckleScript
 
+<img width="600" height="500" src="https://github.com/siddharthparmar7/reason-react-todo/blob/master/images/TodoApp.png">
+
 ## Before you start
 
 * [Install ReasonML](https://reasonml.github.io/docs/en/global-installation.html)
