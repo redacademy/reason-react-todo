@@ -45,26 +45,11 @@ let make = _children => {
       let {items, inputText} = self.state;
       /* Js.log(inputText); */
       let numItems = List.length(items);
-      let word = numItems === 1 ? " item" : "items";
+      let word = numItems === 1 ? " item" : " items";
       <div className="app">
-        <div>
-          <input
-            value=inputText
-            placeholder="add item"
-            onChange=(
-              event =>
-                self.send(
-                  InputText(
-                    ReactDOMRe.domElementToObj(
-                      ReactEventRe.Form.target(event),
-                    )##value,
-                  ),
-                )
-            )
-          />
-          <button onClick=((_) => self.send(Submit))> (str("Add")) </button>
-        </div>
-        <div className="item">
+        <AddTodo submit={(_) => self.send(Submit)} value={inputText} onInputText={(text) => self.send(InputText(text))} />
+        <div className="list">
+
           (
             ReasonReact.array(
               Array.of_list(

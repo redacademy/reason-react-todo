@@ -29,12 +29,23 @@
   margin-top: 15px;
 }
 
+.list {
+  margin-top: 10px;
+}
+
 .item {
   margin: 20px;
 }
 
+.item input {
+  margin-right: 10px;
+}
+.item button {
+  margin-left: 10px;
+}
+
 .footer {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
 }
 
