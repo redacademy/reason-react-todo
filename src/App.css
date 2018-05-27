@@ -16,17 +16,24 @@
 
 .App-intro {
   font-size: large;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app {
-  margin: 20px;
-  text-align: center;
+  width: 500px;
+  margin: 10px;
+}
+
+.app-header {
+  margin: 10px;
 }
 
 .title {
   font-size: 25px;
   font-weight: 500;
-  margin-top: 15px;
 }
 
 .list {
@@ -34,19 +41,25 @@
 }
 
 .item {
-  margin: 20px;
+  width: 400px;
+  display: flex;
+  align-items: flex-start;
+  border-bottom: #222 1px solid;
+  padding: 5px;
+  margin-top: 5px;
 }
 
-.item input {
-  margin-right: 10px;
-}
-.item button {
-  margin-left: 10px;
+.item p {
+  text-align: left;
+  margin: auto;
 }
 
 .footer {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
   margin-top: 20px;
-  text-align: center;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {
