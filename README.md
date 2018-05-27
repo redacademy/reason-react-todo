@@ -28,8 +28,8 @@ Sid Parmar [LinkedIn](www.linkedin.com/in/siddharth-parmar-a901a075)
 
 ## Acknowledgement
 
-Special thanks to [Chenglou](https://github.com/chenglou) for convincing me and motivating me to use ReasonReact through his conference speech [Link](https://www.youtube.com/watch?v=_0T5OSSzxms)
+Special thanks to [Chenglou](https://github.com/chenglou) for convincing me and motivating me to use ReasonReact through his [conference speech](https://www.youtube.com/watch?v=_0T5OSSzxms)
 
 ## Links
 
-Intrested in React, ReasonReact, and more? Find out more about RED Acedemy [Link](https://redacademy.com/)
+Intrested in React, ReasonReact, ReasonML and moere? Find us at [RED Acedemy](https://redacademy.com/)
