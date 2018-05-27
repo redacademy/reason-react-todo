@@ -12,6 +12,6 @@ let make = (~message, _children) => {
         <img src=logo className="App-logo" alt="logo" />
         <h2> (ReasonReact.string(message)) </h2>
       </div>
-      <div className="App-intro"> <TodoHeader /> <TodoLists /> </div>
+      <div className="App-intro"> <TodoApp /> </div>
     </div>,
 };

@@ -6,7 +6,7 @@ type state = {
 type action =
   | InputText(string)
   | Toggle(int)
-  | DeleteAll
+  | RemoveAll
   | RemoveItem(int)
   | RemoveCompleted
   | Submit;
@@ -77,12 +77,12 @@ let make = _children => {
             })
         )
       | Submit => (state => handleSubmit(state))
-      | DeleteAll => (state => ReasonReact.Update({...state, items: []}))
+      | RemoveAll => (state => ReasonReact.Update({...state, items: []}))
       },
     render: self => {
       let {items, inputText} = self.state;
-      /* Js.log(inputText); */
       <div className="app">
+        <TodoHeader />
         <AddTodo
           submit=((_) => self.send(Submit))
           value=inputText
@@ -108,7 +108,7 @@ let make = _children => {
         </div>
         <TodoFooter
           itemCount=(List.length(items))
-          onDeleteAll=((_) => self.send(DeleteAll))
+          onRemoveAll=((_) => self.send(RemoveAll))
           onRemoveCompleted=((_) => self.send(RemoveCompleted))
         />
       </div>;

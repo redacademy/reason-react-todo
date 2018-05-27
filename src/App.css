@@ -1,3 +1,9 @@
+button {
+  font-size: small;
+  border-radius: 8px;
+  padding: 5px;
+}
+
 .App {
   text-align: center;
 }
@@ -36,17 +42,40 @@
   font-weight: 500;
 }
 
+.input {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.input input {
+  width: 80%;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: medium;
+}
+
+.input button {
+  background-color: dodgerblue;
+  color: white;
+  font-size: medium;
+  border-radius: 8px;
+  width: 30%;
+  margin-left: 20px;
+}
+
 .list {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .item {
-  width: 400px;
   display: flex;
-  align-items: flex-start;
   border-bottom: #222 1px solid;
+  align-items: center;
+  height: 30px;
   padding: 5px;
   margin-top: 5px;
+  font-size: larger;
 }
 
 .item p {
@@ -54,12 +83,21 @@
   margin: auto;
 }
 
+.item button {
+  background-color: lemonchiffon;
+  opacity: 0.95;
+}
+
 .footer {
-  width: 400px;
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   align-items: center;
+}
+
+.footer button {
+  background-color: lemonchiffon;
+  opacity: 0.8;
 }
 
 @keyframes App-logo-spin {
