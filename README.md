@@ -1,11 +1,11 @@
 # ReasonReact Todo App
 
-ReasonReact + OCaml + ReasonML + BuckleScript + React Todo App
+ReasonReact Todo App with React + OCaml + ReasonML + BuckleScript
 
 ## Before you start
 
-1.  [install ReasonML](https://reasonml.github.io/docs/en/global-installation.html)
-2.  [install ReasonReact](https://reasonml.github.io/reason-react/docs/en/installation.html)
+* [Install ReasonML](https://reasonml.github.io/docs/en/global-installation.html)
+* [Install ReasonReact](https://reasonml.github.io/reason-react/docs/en/installation.html)
 
 ## Running the Project
 
@@ -18,6 +18,7 @@ ReasonReact + OCaml + ReasonML + BuckleScript + React Todo App
 * [ReasonReact](https://reasonml.github.io/reason-react/)
 * [ReasonML](https://reasonml.github.io/)
 * [React](https://reactjs.org/)
+* [BuckleScript](https://bucklescript.github.io/)
 
 ## Author
 
