@@ -11,7 +11,7 @@ type action =
   | RemoveCompleted
   | Submit;
 
-let component = ReasonReact.reducerComponent("TodoLists");
+let component = ReasonReact.reducerComponent("TodoApp");
 
 let str = ReasonReact.string;
 

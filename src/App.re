@@ -12,6 +12,15 @@ let make = (~message, _children) => {
         <img src=logo className="App-logo" alt="logo" />
         <h2> (ReasonReact.string(message)) </h2>
       </div>
+      <div className="App-intro">
+        <p>
+          (
+            ReasonReact.string(
+              "To get started, edit src/App.re and save to reload",
+            )
+          )
+        </p>
+      </div>
       <div className="App-intro"> <TodoApp /> </div>
     </div>,
 };
